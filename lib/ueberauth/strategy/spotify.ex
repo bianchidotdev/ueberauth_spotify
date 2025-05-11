@@ -77,6 +77,10 @@ defmodule Ueberauth.Strategy.Spotify do
     end
   end
 
+  def uid(conn) do
+    conn.private.spotify_user["id"]
+  end
+
   @doc """
   Fetches the fields to populate the info section of the `Ueberauth.Auth` struct.
   """
